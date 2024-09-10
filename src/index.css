@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v15-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/poppins-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/poppins-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/poppins-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/poppins-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/poppins-v15-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
+}
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+ 
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+ 
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+ 
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+ 
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-foreground font-poppins select-none;
+  }
+}
+
+/* Auth Page Styles */
+
+@layer base{
+  .login-page, .register-page{
+    @apply h-screen font-poppins flex flex-col items-center pt-[8rem] md:pt-[10rem] lg:pt-[5rem] gap-7 bg-[#fff]
+  }
+
+  .login-cont{
+    @apply w-11/12 sm:w-2/4 md:w-2/4 lg:w-[25%] border-2 ring-1 ring-indigo-50 border-none bg-[#f7efef] shadow-2xl rounded-2xl p-9 flex flex-col gap-4
+  }
+
+  .inp{
+    @apply w-full border-black border py-2 px-3 rounded-lg focus:border-indigo-500 outline-none
+  }
+
+  .login-btn{
+    @apply w-full border-black border p-2 rounded-lg font-bold cursor-pointer
+  }
+}
+
+
+
+@layer base{
+
+
+  /* Main Container */
+  .main-cont{
+    @apply w-screen h-full lg:w-[84.5vw] lg:h-[99vh] lg:border-black lg:ring-0 lg:ring-white lg:border-2 lg:rounded-xl bg-[#FAF9F6] scroll-smooth lg:flex lg:items-center
+  }
+
+  /* Title */
+  .title{
+    @apply w-full h-16 sticky top-0 lg:fixed bg-black object-contain overflow-hidden lg:w-[84.3%] lg:mt-1 lg:bg-inherit lg:rounded-t-lg flex items-center
+  }
+
+  .title_text{
+    @apply pl-[2rem] font-bold text-3xl text-yellow-50 lg:text-indigo-900
+  }
+
+  /* Dashboard Styles */
+  .dashboard{
+    @apply w-full flex flex-row justify-evenly lg:h-[91.5%] lg:mt-14
+  }
+
+  .left-cont{
+    @apply w-[97%] lg:w-[55%] flex flex-col
+  }
+
+  /* Balance  */
+  .balance{
+    @apply h-56 flex flex-wrap items-center mt-2 mb-3 gap-1 justify-center lg:h-28 lg:flex-nowrap lg:flex-row lg:items-center lg:gap-3
+  }
+
+  .card-1{
+    @apply lg:w-full flex flex-row ring-1 ring-emerald-100 lg:ring-emerald-200 lg:bg-emerald-50 order-2 lg:order-1 w-[48.8%] lg:hover:scale-[1.05] delay-0
+
+  }
+
+  .card-2{
+    @apply lg:w-full flex flex-row bg-black ring-1 ring-indigo-200 order-1 lg:order-2 lg:bg-indigo-50 lg:border-none w-[97.6%] lg:hover:scale-[1.05]
+
+  }
+
+  .card-3{
+    @apply lg:w-full flex flex-row ring-1 ring-rose-100 lg:ring-rose-200 lg:bg-rose-50 order-3 w-[48.8%] lg:hover:scale-[1.05]
+  }
+
+  .card-header{
+    @apply flex flex-row items-center justify-between space-y-0 pb-2
+  }
+
+  .card-header-2{
+    @apply flex flex-row items-center justify-between space-y-0 pb-2
+  }
+
+  .card-header-3{
+    @apply flex flex-row items-center justify-between space-y-0 pb-2
+  }
+
+  .right-cont{
+    @apply w-[40%] flex flex-col justify-center
+  }
+}
+
+/* scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  display: none;
+}
